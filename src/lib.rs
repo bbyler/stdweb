@@ -102,6 +102,9 @@ pub use webcore::number::Number;
 pub use webcore::object::Object;
 pub use webcore::array::Array;
 
+/// A Rust/stdweb backend for M
+pub use ecosystem::m;
+
 #[cfg(feature = "serde")]
 /// A module with serde-related APIs.
 pub mod serde {

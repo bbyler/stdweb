@@ -256,6 +256,16 @@ fn main() {
 
     todays_date.set_text_content( &date_string );
 
+    let d: Date = js! (
+        return new Date(2000, 0, 1, 12, 5, 7, 10);
+    ).try_into().unwrap();
+
+    let d_utc = d.get_time();
+
+    js!(
+        console.log(@{d_utc});
+    );
+
     update_dom( &state );
     stdweb::event_loop();
 }

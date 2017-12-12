@@ -785,7 +785,7 @@ pub enum ConversionError {
     Custom( String )
 }
 
-fn value_type_name( value: &Value ) -> &'static str {
+pub fn value_type_name( value: &Value ) -> &'static str {
     match *value {
         Value::Undefined => "Undefined",
         Value::Null => "Null",
