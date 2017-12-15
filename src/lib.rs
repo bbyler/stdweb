@@ -60,7 +60,7 @@
 //! ```
 
 #![deny(
-    missing_docs,
+    // missing_docs,
     missing_debug_implementations,
     trivial_numeric_casts,
     unstable_features,
@@ -77,7 +77,8 @@
 extern crate serde as serde_crate;
 
 #[cfg(any(test, feature = "serde_json"))]
-extern crate serde_json;
+#[macro_use]
+extern crate serde_json as serde_json_crate;
 
 #[cfg(all(test, feature = "serde"))]
 #[macro_use]
@@ -112,6 +113,11 @@ pub mod serde {
         ConversionError,
         Serde
     };
+}
+
+#[cfg(feature = "serde_json")]
+pub mod serde_json {
+    pub use ecosystem::serde_json::TryFrom;
 }
 
 /// A module with bindings to the Web APIs.
