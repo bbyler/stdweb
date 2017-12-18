@@ -189,7 +189,8 @@ pub mod web {
             LoadStartEvent,
             LoadEndEvent,
             AbortEvent,
-            ErrorEvent
+            ErrorEvent,
+            InputEvent
         };
     }
 }
