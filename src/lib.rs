@@ -70,7 +70,7 @@
 #![cfg_attr(feature = "dev", allow(unstable_features))]
 #![cfg_attr(feature = "dev", feature(plugin))]
 #![cfg_attr(feature = "dev", plugin(clippy))]
-#![recursion_limit="750"]
+#![recursion_limit="1500"]
 
 #[cfg(feature = "serde")]
 #[macro_use]
@@ -207,7 +207,7 @@ pub mod unstable {
 
 #[doc(hidden)]
 pub mod private {
-    pub use webcore::ffi::emscripten_asm_const_int;
+    pub use webcore::ffi::exports::*;
     pub use webcore::serialization::{
         JsSerializable,
         JsSerializableOwned,
