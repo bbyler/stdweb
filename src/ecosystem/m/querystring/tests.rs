@@ -3,8 +3,6 @@ mod tests {
     use ecosystem::m::querystring::build::build_query_string;
 
     extern crate serde_json;
-
-    // #[macro_use]
     use serde_json::Value as JsonValue;
 
     #[test]
@@ -159,6 +157,20 @@ mod tests {
         let expected = "a=false";
 
         assert!( query_s == expected );
+    }
+
+    ///////////////////////////////////////////////////////////
+    // parse tests
+    ///////////////////////////////////////////////////////////
+
+    #[test]
+    fn test_parse() {
+        // let data = parse("?aaa=bbb".to_string());
+        // let expected: JsonValue = json!({
+        //     "aaa": "bbb"
+        // });
+
+        // assert!( data == expected );
     }
 }
 

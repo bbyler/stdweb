@@ -77,7 +77,6 @@
 extern crate serde as serde_crate;
 
 #[cfg(any(test, feature = "serde_json"))]
-#[macro_use]
 extern crate serde_json;
 
 #[cfg(all(test, feature = "serde"))]

@@ -3,7 +3,6 @@ use std::borrow::Cow;
 use webcore::try_from::TryInto;
 
 extern crate serde_json;
-
 use serde_json::Value as JsonValue;
 
 struct StateFn< 'a > {
